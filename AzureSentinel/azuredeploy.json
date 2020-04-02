@@ -43,6 +43,8 @@
         "location": {
             "type": "string",
             "allowedValues": [
+                "northeurope",
+                "southeurope",
                 "westus",
                 "westus2",
                 "eastus",
