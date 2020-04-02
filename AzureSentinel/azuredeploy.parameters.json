@@ -3,19 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "workspaceName": {
-            "value": "asc-shared-workspace"
+            "value": "Sentinel2Go"
         },
-        "location": {
-            "value": "eastus"
-        },
-        "sharedWorkspace": {
-            "value": "existing"
-        },
-        "workspaceSku": {
+        "pricingTier": {
             "value": "PerGB2018"
         },
         "dataRetention": {
-            "value": 60
+            "value": 30
         }
     }
 }
