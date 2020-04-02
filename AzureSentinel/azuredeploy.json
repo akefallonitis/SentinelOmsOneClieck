@@ -2,13 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "utcValue": {
-            "type": "string",
-            "defaultValue": "[utcNow()]",
-            "metadata": {
-                "description": "Returns the current (UTC) datetime value in the specified format. If no format is provided, the ISO 8601 (yyyyMMddTHHmmssZ) format is used"
-            }
-        },
         "workspaceName": {
             "type": "string",
             "metadata": {
@@ -55,7 +48,7 @@
         }
     },
     "variables": {
-        "uniqueWorkspace": "[concat('log-', parameters('workspaceName'), parameters('utcValue'))]"
+        "uniqueWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
     },
     "resources": [
         {
