@@ -64,7 +64,7 @@
     },
     "resources": [
         {
-		    "condition": "[equals(parameters('sharedWorkspace'), 'new')]",
+	    "condition": "[equals(parameters('sharedWorkspace'), 'new')]",
             "apiVersion": "2015-11-01-preview",
             "type": "Microsoft.OperationalInsights/workspaces",
             "name": "[variables('uniqueWorkspace')]",
