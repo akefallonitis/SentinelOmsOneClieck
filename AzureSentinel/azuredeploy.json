@@ -48,13 +48,14 @@
         }
     },
     "variables": {
-        "uniqueWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
+	    "uniqueWorkspace": "[parameters('workspaceName')]"
+        "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
     },
     "resources": [
         {
             "apiVersion": "2015-11-01-preview",
             "type": "Microsoft.OperationalInsights/workspaces",
-            "name": "[variables('workspaceName')]",
+            "name": "[variables('uniqueWorkspace')]",
             "location": "[parameters('location')]",
             "properties": {
                 "retentionInDays": "[parameters('dataRetention')]",
