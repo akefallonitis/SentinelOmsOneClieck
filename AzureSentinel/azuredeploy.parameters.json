@@ -5,6 +5,9 @@
         "workspaceName": {
             "value": "Sentinel2Go"
         },
+        "sharedWorkspace": {
+            "value": "existing"
+        },
         "pricingTier": {
             "value": "PerGB2018"
         },
