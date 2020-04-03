@@ -48,8 +48,8 @@
         }
     },
     "variables": {
-	    "uniqueWorkspace": "[parameters('workspaceName')]"
-        "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
+	    "uniqueWorkspace": "[parameters('workspaceName')]",
+            "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
     },
     "resources": [
         {
