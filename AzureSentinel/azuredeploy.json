@@ -49,7 +49,7 @@
     },
     "variables": {
 	    "uniqueWorkspace": "[parameters('workspaceName')]",
-        "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
+            "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
     },
     "resources": [
         {
