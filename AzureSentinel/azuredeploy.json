@@ -91,7 +91,7 @@
                 "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', variables('uniqueWorkspace'))]"
             },
             "plan": {
-                "name": "[concat('SecurityInsights','(', variables('SentinelWorkspace'),')')]",
+                "name": "[concat('SecurityInsights','(', variables('uniqueWorkspace'),')')]",
                 "product": "OMSGallery/SecurityInsights",
                 "publisher": "Microsoft",
                 "promotionCode": ""
