@@ -6,7 +6,7 @@
             "value": "asc-shared-workspace"
         },
         "location": {
-            "value": "eastus"
+            "value": "northeurope"
         },
         "sharedWorkspace": {
             "value": "existing"
