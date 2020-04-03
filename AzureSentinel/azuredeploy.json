@@ -8,8 +8,7 @@
                 "description": "Name for the Log Analytics workspace used to aggregate data"
             }
         },
-		
-        "pricingTier": {
+	"pricingTier": {
             "type": "string",
             "allowedValues": [
                 "PerGB2018",
@@ -49,7 +48,7 @@
         }
     },
     "variables": {
-	        "uniqueWorkspace": "[parameters('workspaceName')]",
+	    "uniqueWorkspace": "[parameters('workspaceName')]",
             "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
     },
     "resources": [
