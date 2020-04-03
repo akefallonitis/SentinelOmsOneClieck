@@ -86,19 +86,5 @@
             }
         }
 
-    ],
-    "outputs": {
-        "workspaceName": {
-            "type": "string",
-            "value": "[variables('uniqueWorkspace')]"
-        },
-        "workspaceIdOutput": {
-            "type": "string",
-            "value": "[reference(resourceId('Microsoft.OperationalInsights/workspaces/', variables('uniqueWorkspace')), '2015-11-01-preview').customerId]"
-        },
-        "workspaceKeyOutput": {
-            "type": "string",
-            "value": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces/', variables('uniqueWorkspace')), '2015-11-01-preview').primarySharedKey]"
-        }
-    }
+    ]
 }
