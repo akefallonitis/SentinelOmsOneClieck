@@ -59,7 +59,7 @@
         }
     },
     "variables": {
-        "azureSentinelSolutionName": "[concat('SecurityInsights', '(', parameters('workspaceName'), ')')]",
+        "azureSentinelSolutionName": "[concat('SecurityInsights', '(', 'sentinel-', parameters('workspaceName'), ')')]",
         "product": "OMSGallery/SecurityInsights",
         "publisher": "Microsoft"
     },
