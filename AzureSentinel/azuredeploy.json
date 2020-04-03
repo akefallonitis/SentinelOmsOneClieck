@@ -8,17 +8,7 @@
                 "description": "Name for the Log Analytics workspace used to aggregate data"
             }
         },
-	"sharedWorkspace": {
-            "type": "string",
-            "defaultValue": "existing",
-            "allowedValues": [
-                "new",
-                "existing"
-            ],
-            "metadata": {
-                "description": "Specify whether you want to create a new Log Analytics workspace for your Azure Sentinel"
-            }
-        },
+		
         "pricingTier": {
             "type": "string",
             "allowedValues": [
@@ -59,12 +49,11 @@
         }
     },
     "variables": {
-	    "uniqueWorkspace": "[parameters('workspaceName')]",
+	        "uniqueWorkspace": "[parameters('workspaceName')]",
             "SentinelWorkspace": "[concat('sentinel-', parameters('workspaceName'))]"
     },
     "resources": [
         {
-	    "condition": "[equals(parameters('sharedWorkspace'), 'new')]",
             "apiVersion": "2015-11-01-preview",
             "type": "Microsoft.OperationalInsights/workspaces",
             "name": "[variables('uniqueWorkspace')]",
@@ -80,7 +69,7 @@
             }
         },
         {
-            "name": "[concat('SecurityInsights','(', variables('uniqueWorkspace'),')')]",
+            "name": "[concat('SecurityInsights','(', variables('SentinelWorkspace'),')')]",
             "type": "Microsoft.OperationsManagement/solutions",
             "apiVersion": "2015-11-01-preview",
             "location": "[resourceGroup().location]",
@@ -91,7 +80,7 @@
                 "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', variables('uniqueWorkspace'))]"
             },
             "plan": {
-                "name": "[concat('SecurityInsights','(', variables('uniqueWorkspace'),')')]",
+                "name": "[concat('SecurityInsights','(', variables('SentinelWorkspace'),')')]",
                 "product": "OMSGallery/SecurityInsights",
                 "publisher": "Microsoft",
                 "promotionCode": ""
