@@ -5,17 +5,14 @@
         "workspaceName": {
             "value": "asc-shared-workspace"
         },
-        "location": {
-            "value": "northeurope"
-        },
         "sharedWorkspace": {
             "value": "existing"
         },
-        "workspaceSku": {
+        "pricingTier": {
             "value": "PerGB2018"
         },
         "dataRetention": {
-            "value": 60
+            "value": 30
         }
     }
 }
